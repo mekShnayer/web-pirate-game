@@ -1,0 +1,33 @@
+.container {
+  background-color: white;
+  height: inherit;
+  display: flex;
+  /* position:absolute; */
+  /* right:0; */
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: larger;
+  flex: 1;
+  font-size:50px;
+  /* margin: auto; */
+}
+
+#dice-roll{
+  /* font-size: xx-large; */
+  /* font-weight: bolder; */
+  font-size: 70px;
+  margin: auto;
+  border-radius: 10px;
+  background-color: orange;
+  border:none;
+  padding: 20px;
+  color: white;
+  width: fit-content;
+  
+}
+#hand{
+  margin: auto;
+}
+#dice{
+  margin: auto;
+}

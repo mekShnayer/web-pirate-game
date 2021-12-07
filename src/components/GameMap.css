@@ -1,0 +1,27 @@
+.islands-container {
+  display: flex;
+  /* border: 5px solid black; */
+  flex: 3;
+  height: 99%;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.island {
+  display: flex;
+  /* flex: 1; */
+  justify-content: center;
+  align-content: center;
+  /* border: 2px black solid; */
+  width: 32%;
+  flex-wrap: wrap;
+  height: 50%;
+}
+
+#pirate {
+  /* border: 3px solid black; */
+  position:absolute;
+  left: 110px;
+  margin-top: 60px;
+}
