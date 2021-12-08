@@ -1,5 +1,4 @@
 import './GameMap.css'
-// import pirate from '../images/pirate.png'
 import island_1 from '../images/island_1.png'
 import island_2 from '../images/island_2.png'
 import dragon from '../images/dragon.png'
@@ -47,10 +46,13 @@ function GameMap() {
       {
         islandsArr.map((island, inx) =>
           <div className='island' key={inx}>
-            {island.inx}
-            {inx + 1 == diceResult && <Pirate />}
-            <img src={island.src} alt='img' />
 
+            <img src={island.src} alt='img' className='island' />
+            {inx + 1 == diceResult && <Pirate />}
+
+            <div className='island-num'>
+              {island.inx}
+            </div>
           </div>
         )
       }

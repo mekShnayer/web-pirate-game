@@ -1,13 +1,13 @@
 .game {
   background-image: url('../images/Sea.png');
-  /* background-color: lightcoral; */
+  /* background-position-x: left; */
   height: 100vh;
+  width: 100vw;
   background-size: cover;
-  /* background-position: left; */
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
+  /* display: flex; */
+  /* flex: 1; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
+  /* flex-direction: row; */
+} 

@@ -5,8 +5,8 @@ function Dice() {
   
 
   return (
-    <div id='dice'>
-      <img src={Dice_pic} alt='img'/>
+    <div id='dice' className='side-items'>
+      <img src={Dice_pic} alt='img' className='side-items'/>
     </div>
   )
 }

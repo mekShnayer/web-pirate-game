@@ -11,14 +11,14 @@ const SideBar = () => {
 
   return (
     <div className='side-bar'>
-      <div id='hand'>
-        <img src={Hand} alt='img' />
+      <div id='hand' className='side-items'>
+        <img src={Hand} alt='img' className='side-items'/>
         <br />
         <span>  browse map</span>
       </div>
-      <button id='dice-roll' onClick={rollDice}> Roll dice</button>
+      <button id='dice-roll' onClick={rollDice} className='side-items'> Roll dice</button>
       <Dice />
-      <h1>{diceResult}</h1>
+      {/* <h1 className='side-items'>{diceResult}</h1> */}
     </div>
   )
 }
