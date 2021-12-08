@@ -7,6 +7,8 @@ import island_4 from '../images/island_4.png'
 import bottle_message from '../images/bottle_message.png'
 import island_6 from '../images/island_6.png'
 import Pirate from './Pirate'
+import { useContext } from 'react'
+import { DiceContext } from '../context/DiceContextProvider'
 
 const islandsArr = [
   {
@@ -36,14 +38,16 @@ const islandsArr = [
 ]
 
 function GameMap() {
+  const { diceResult, rollDice } = useContext(DiceContext);
+
   return (
-    <div className='islands-container'>
+    <div className='game-map'>
       <Pirate />
       {
         islandsArr.map((island, inx) =>
           <div className='island' key={inx}>
-            {/* {island.inx} */}
-            <img src={island.src} alt='img'/>
+            {island.inx}
+            <img src={island.src} alt='img' />
           </div>
         )
       }

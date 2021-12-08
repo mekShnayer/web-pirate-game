@@ -6,6 +6,6 @@ function Pirate () {
   return (
     <img src={pirate} alt='img' id='pirate'/>
   )
-}
+} 
 
 export default Pirate;

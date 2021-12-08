@@ -1,23 +1,24 @@
 import './SideBar.css'
 import Dice from './Dice';
 import Hand from '../images/hand.png';
+import React, { useState, useContext } from 'react';
+import { DiceContext } from '../context/DiceContextProvider';
 
-function SideBar() {
+const SideBar = () => {
+  const { diceResult } = useContext(DiceContext);
+  const { rollDice } = useContext(DiceContext)
 
-  const DiceRoll = () => {
-    let result = Math.floor(Math.random()*6+1)
-    console.log(result)
-  }
 
   return (
-    <div className='container'>
+    <div className='side-bar'>
       <div id='hand'>
         <img src={Hand} alt='img' />
         <br />
         <span>  browse map</span>
       </div>
-      <button id='dice-roll' onClick={DiceRoll}> Roll dice</button>
+      <button id='dice-roll' onClick={rollDice}> Roll dice</button>
       <Dice />
+      <h1>{diceResult}</h1>
     </div>
   )
 }

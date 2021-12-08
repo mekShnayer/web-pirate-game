@@ -5,7 +5,7 @@ import PirateGame from './components/PirateGame';
 function App() {
   return (
     <div className="App">
-      <PirateGame />
+        <PirateGame />
     </div>
   );
 }
