@@ -39,15 +39,18 @@ const islandsArr = [
 
 function GameMap() {
   const { diceResult, rollDice } = useContext(DiceContext);
-
+  console.log(diceResult)
   return (
     <div className='game-map'>
-      <Pirate />
+      {/* <Pirate /> */}
+
       {
         islandsArr.map((island, inx) =>
           <div className='island' key={inx}>
             {island.inx}
+            {inx + 1 == diceResult && <Pirate />}
             <img src={island.src} alt='img' />
+
           </div>
         )
       }

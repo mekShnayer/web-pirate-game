@@ -5,8 +5,8 @@ import React, { useState, useContext } from 'react';
 import { DiceContext } from '../context/DiceContextProvider';
 
 const SideBar = () => {
-  const { diceResult } = useContext(DiceContext);
-  const { rollDice } = useContext(DiceContext)
+  const { diceResult ,rollDice} = useContext(DiceContext);
+  // const { rollDice } = useContext(DiceContext)
 
 
   return (

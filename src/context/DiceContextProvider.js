@@ -3,7 +3,7 @@ import React, { createContext, useState } from 'react';
 export const DiceContext = createContext();
 
 const DiceContextProvider = (props) => {
-  const [diceResult, setDiceResult] = useState(0)
+  const [diceResult, setDiceResult] = useState(1)
   
   const rollDice = () => {
     let result = Math.floor(Math.random() * 6 + 1);
