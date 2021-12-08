@@ -38,11 +38,36 @@ const islandsArr = [
 
 function GameMap() {
   const { diceResult, rollDice } = useContext(DiceContext);
-  console.log(diceResult)
+  // console.log(diceResult)
+  let message = '';
+  const messages = (result) => {
+
+    switch (result) {
+      case 1:
+        message = 'you stayed in the same place, GAME OVER'
+        break;
+      case 2:
+        message = '50% win and 50% GAME OVER'
+        break;
+      case 3:
+        message = 'you got eaten by a dragon, GAME OVER'
+        break;
+      case 4:
+        message = 'you have found the treasure, YOU WON!'
+        break;
+      case 5:
+        message = 'random message generator'
+        break;
+      case 6:
+        message = 'you got to the final island, YOU WON!'
+        break;
+    }
+    console.log(message)
+  }
+
   return (
     <div className='game-map'>
-      {/* <Pirate /> */}
-
+      {messages(diceResult)}
       {
         islandsArr.map((island, inx) =>
           <div className='island' key={inx}>
