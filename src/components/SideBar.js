@@ -18,7 +18,6 @@ const SideBar = () => {
       </div>
       <button id='dice-roll' onClick={rollDice} className='side-items'> Roll dice</button>
       <Dice />
-      {/* <h1 className='side-items'>{diceResult}</h1> */}
     </div>
   )
 }

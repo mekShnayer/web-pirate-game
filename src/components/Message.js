@@ -5,9 +5,15 @@ import './Message.css';
 const Message = () => {
 
   const { diceResult, message, setMessage, startOver } = useContext(DiceContext);
-  const randomMessagesArr = ['funny1', 'funny2']
+  const randomMessagesArr = [
+    `Don't you have something better to do?`,
+    'The real treasure is time, so stop killing it playing this game!',
+    'Shani is the best , better hire her',
+    `Don't look behind you!`,
+    'The ghost behind you thinks you need to go out more'
+  ]
   const randomIndex = Math.floor(Math.random() * randomMessagesArr.length)
-  const rum = ['rum is poisand, you lost', 'rum is good, have fun - you won!']
+  const rum = ['The rum is poisand, YOU LOST', 'The rum is good, YAY - YOU WON!']
   const randomRum = Math.floor(Math.random() * 2)
 
   switch (diceResult) {
@@ -24,7 +30,7 @@ const Message = () => {
       setMessage('you have found the treasure, YOU WON!')
       break;
     case 5:
-      setMessage(randomMessagesArr[randomIndex])
+      setMessage(`Message in a bottle: ${randomMessagesArr[randomIndex]}`)
       break;
     case 6:
       setMessage('you got to the final island, YOU WON!')
@@ -35,7 +41,7 @@ const Message = () => {
     <div className='message-div'>
       <h1 id='message'> {message}</h1>
       <button id='start-over'
-        onClick={()=>startOver()}
+        onClick={() => startOver()}
       >start over</button>
     </div>
   )
