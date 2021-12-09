@@ -4,9 +4,7 @@ import Dice_3 from '../images/dice/dice-3.png';
 import Dice_4 from '../images/dice/dice-4.png';
 import Dice_5 from '../images/dice/dice-5.png';
 import Dice_6 from '../images/dice/dice-6.png';
-
 import React, { useContext } from 'react';
-
 import { DiceContext } from '../context/DiceContextProvider';
 
 function Dice() {

@@ -12,9 +12,15 @@ const DiceContextProvider = (props) => {
     setIsStart(false)
   }
 
+  const startOver = () =>{
+    console.log('starting over')
+    setIsStart(true)
+    setDiceResult(1)
+  }
+
 
   return (
-    <DiceContext.Provider value={{ diceResult, rollDice, isStart, setMessage, message }}>
+    <DiceContext.Provider value={{ diceResult, rollDice, isStart, setMessage, message ,startOver}}>
       {props.children}
     </DiceContext.Provider>
   )

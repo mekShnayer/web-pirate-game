@@ -4,7 +4,7 @@ import './Message.css';
 
 const Message = () => {
 
-  const { diceResult, message, setMessage, isStart, setIsStart } = useContext(DiceContext);
+  const { diceResult, message, setMessage, startOver } = useContext(DiceContext);
   const randomMessagesArr = ['funny1', 'funny2']
   const randomIndex = Math.floor(Math.random() * randomMessagesArr.length)
   const rum = ['rum is poisand, you lost', 'rum is good, have fun - you won!']
@@ -30,16 +30,12 @@ const Message = () => {
       setMessage('you got to the final island, YOU WON!')
       break;
   }
-  // const startOver = () => {
-  //   console.log('starting over')
-  //   setIsStart(true)
-  // }
+
   return (
     <div className='message-div'>
-      {console.log(message)}
       <h1 id='message'> {message}</h1>
-      <button id='start-over' 
-      // ={()=>setIsStart(!isStart)}
+      <button id='start-over'
+        onClick={()=>startOver()}
       >start over</button>
     </div>
   )
