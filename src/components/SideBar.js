@@ -5,14 +5,14 @@ import React, { useState, useContext } from 'react';
 import { DiceContext } from '../context/DiceContextProvider';
 
 const SideBar = () => {
-  const { diceResult ,rollDice} = useContext(DiceContext);
+  const { diceResult, rollDice } = useContext(DiceContext);
   // const { rollDice } = useContext(DiceContext)
-
+ 
 
   return (
     <div className='side-bar'>
       <div id='hand' className='side-items'>
-        <img src={Hand} alt='img' className='side-items'/>
+        <img src={Hand} alt='img' className='side-items' />
         <br />
         <span>  browse map</span>
       </div>
