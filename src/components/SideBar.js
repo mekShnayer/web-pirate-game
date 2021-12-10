@@ -6,7 +6,6 @@ import { DiceContext } from '../context/DiceContextProvider';
 
 const SideBar = () => {
   const { diceResult, rollDice } = useContext(DiceContext);
-  // const { rollDice } = useContext(DiceContext)
  
 
   return (

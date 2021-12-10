@@ -5,11 +5,13 @@ import PirateGame from './components/PirateGame';
 import React, { useState, useEffect } from 'react';
 
 function App() {
-  const [isLandscape, setIsLandscape] = useState(window.innerHeight > window.innerWidth)
+  const [isLandscape, setIsLandscape] = useState(window.innerHeight < window.innerWidth)
+  useEffect(() => {
+    window.addEventListener("orientationchange", function () {
+      setIsLandscape(window.innerHeight > window.innerWidth)
+    })
+  }, [])
 
-  window.addEventListener("orientationchange", function () {
-    setIsLandscape(window.innerHeight > window.innerWidth)
-  }, false)
 
   return (
     <div className="App">

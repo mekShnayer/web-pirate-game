@@ -1,3 +1,6 @@
+/* :rooot{
+  --from-div: var(--pirate),
+} */
 .game-map {
   display: flex;
   flex: 5 1;
@@ -21,22 +24,34 @@
   position: relative;
 }
 
+/* @keyframes pirate {
+  
+  to {
+    left: 10px
+  }
+}
+.movtion {
+  animation-name: pirate;
+  animation-duration: 4s;
+} */
 #pirate {
   position: absolute;
   /* top:5%; */
   bottom: 60px;
   height: 150px;
+
 }
 
-.island-num{
-    border-radius: 126%;
-    border: black solid 2px;
-    padding: 5%;
-    /* margin: -22px; */
-    position: relative;
-    left: 0px;
-    /* height: 21px; */
-    position: absolute;
-    background-color: #ed1b27db;
-    width: 20px;
+.island-num {
+  border-radius: 126%;
+  border: black solid 2px;
+  padding: 5%;
+  /* margin: -22px; */
+  position: relative;
+  left: 0px;
+  /* height: 21px; */
+  position: absolute;
+  background-color: #ed1b27db;
+  width: 20px;
+  top: 50px
 }

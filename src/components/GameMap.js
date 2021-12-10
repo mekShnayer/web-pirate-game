@@ -13,44 +13,51 @@ import Message from './Message'
 const islandsArr = [
   {
     inx: 1,
-    src: island_1
+    src: island_1,
+    left: '10px',
+    top: '-10px'
   },
   {
     inx: 2,
-    src: island_2
+    src: island_2,
+    top: '20px'
   },
   {
     inx: 3,
     src: dragon
   },
   {
-    inx: 4,
-    src: island_4
+    inx: 5,
+    src: bottle_message,
+
+
   },
   {
-    inx: 5,
-    src: bottle_message
+    inx: 4,
+    src: island_4,
+    topnum: '150px',
+    top: '-150px'
   },
   {
     inx: 6,
-    src: island_6
+    src: island_6,
+    topnum: '150px'
   },
 ]
 
 function GameMap() {
   const { diceResult, rollDice, isStart } = useContext(DiceContext);
-  
+
   return (
     <div className='game-map'>
       {!isStart ? <Message /> : ''}
       {
         islandsArr.map((island, inx) =>
-          <div className='island' key={inx}>
-
+          <div className='island' key={inx} id={`num_${inx}`} style={{ left: island.left, top: island.top }}>
             <img src={island.src} alt='img' className='island' />
             {inx + 1 == diceResult && <Pirate />}
 
-            <div className='island-num'>
+            <div className='island-num' style={{ top: island.topnum }}>
               {island.inx}
             </div>
           </div>

@@ -36,8 +36,8 @@ function Dice() {
     return img;
   }
   return (
-    <div id='dice' className='side-items'>
-      <img src={result()} alt='img' className='side-items' />
+    <div  className='side-items'>
+      <img src={result()} alt='img' className='side-items' id='dice'/>
     </div>
   )
 }

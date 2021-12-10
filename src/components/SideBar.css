@@ -16,7 +16,7 @@
 
 #dice-roll {
   font-size: 20px;
-  margin: auto;
+  /* margin: auto; */
   border-radius: 10px;
   background-color: orange;
   border: none;
@@ -26,9 +26,21 @@
 }
 
 #hand {
-  margin: auto;
+  /* margin: auto; */
   width: inherit;
   max-width: 100px;
+}
+
+@keyframes rolling {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.rolling {
+  animation-name: rolling;
+  animation-duration: 2s;
 }
 
 #dice {
