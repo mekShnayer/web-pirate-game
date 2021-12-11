@@ -1,15 +1,13 @@
 @keyframes showBlock {
   from {
     display: block;
-    width: 0px;
-    height: 200px;
     opacity: 0;
+    font-size: 0;
   }
 
   to {
     opacity: 1;
-    width: 400px;
-
+    font-size: large;
   }
 }
 
@@ -29,19 +27,21 @@
   /* animation-delay: 2s; */
   animation-iteration-count: 1;
 }
-
+/* 
 @keyframes showContent {
   from {
-    /* width: 0; */
+    width: 0;
     opacity: 0;
+    font-size: 0px;
     height: 0;
   }
 
   to {
     opacity: 1;
+    font-size: xx-large;
     height: fit-content;
   }
-}
+} */
 
 
 
@@ -50,7 +50,7 @@
   font-family: cursive;
   font-size: xx-large;
   /* animation-name: showContent; */
-  /* animation-duration: 5s;
+  /* animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: 1; */
 }
