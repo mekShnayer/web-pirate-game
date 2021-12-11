@@ -1,3 +1,18 @@
+@keyframes showBlock {
+  from {
+    display: block;
+    width: 0px;
+    height: 200px;
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    width: 400px;
+
+  }
+}
+
 .message-div {
   position: absolute;
   border: 3px solid black;
@@ -9,12 +24,37 @@
   color: #c7b5b5;
   border-radius: 50px;
   z-index: 2;
+  animation-name: showBlock;
+  animation-duration: 2s;
+  /* animation-delay: 2s; */
+  animation-iteration-count: 1;
 }
 
-.message {
-  font-family: cursive;
-  font-size: xxx-large;
+@keyframes showContent {
+  from {
+    /* width: 0; */
+    opacity: 0;
+    height: 0;
+  }
+
+  to {
+    opacity: 1;
+    height: fit-content;
+  }
 }
+
+
+
+
+#message {
+  font-family: cursive;
+  font-size: xx-large;
+  /* animation-name: showContent; */
+  /* animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1; */
+}
+
 
 #start-over {
   padding: 15px;
@@ -24,4 +64,8 @@
   background-color: rgb(77, 72, 63);
   font-size: larger;
   font-family: inherit;
+  /* animation-name: showContent; */
+  /* animation-duration: 5s; */
+  /* animation-delay: 2s; */
+  /* animation-iteration-count: 1; */
 }
