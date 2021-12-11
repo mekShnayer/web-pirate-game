@@ -15,31 +15,37 @@ const islandsArr = [
     inx: 1,
     src: island_1,
     left: '10px',
-    top: '-10px'
+    top: '-10px',
+    description: 'You need to escape this island, if you stay here you loose.'
   },
   {
     inx: 2,
     src: island_2,
-    top: '20px'
+    top: '20px',
+    description: 'Here you win Rum barrle. Be careful! There is 50% chance that it is poisand- if it is, you loose, otherwise you win'
   },
   {
     inx: 3,
-    src: dragon
+    src: dragon,
+    description: 'If you land here the dragon is gonna eat you, carefull mate'
   },
   {
     inx: 5,
     src: bottle_message,
+    description: 'If you land here you will find a funny message in a bottle'
   },
   {
     inx: 4,
     src: island_4,
     topnum: '150px',
-    top: '-150px'
+    top: '-150px',
+    description: 'If you land here - you will find the treasure! win win win! $$$ '
   },
   {
     inx: 6,
     src: island_6,
-    topnum: '150px'
+    topnum: '150px',
+    description: 'If you landed here, you escaped the first island succsesfully and you win'
   },
 ]
 
@@ -48,6 +54,7 @@ function GameMap() {
 
   return (
     <div className='game-map'>
+    
       {!isStart ? <Message /> : ''}
       {
         islandsArr.map((island, inx) =>
@@ -55,7 +62,7 @@ function GameMap() {
             <img src={island.src} alt='img' className='island' id={`island_${island.inx}`} />
             {island.inx == diceResult && <Pirate />}
 
-            <div className='island-num' style={{ top: island.topnum }}>
+            <div className='island-num' style={{ top: island.topnum }} onClick={()=>alert(island.description)}>
               {island.inx}
             </div>
           </div>

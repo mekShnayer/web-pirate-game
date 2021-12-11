@@ -1,5 +1,5 @@
 .side-bar {
-  background-color: rgba(255, 255, 255, 0.788);
+  background-color: rgba(233, 203, 203, 0.788);
   height: 100vh;
   display: flex;
   position: fixed;
@@ -22,6 +22,7 @@
   border: none;
   padding: 10px;
   color: white;
+  font-family: inherit;
   /* width: 120px; */
 }
 
@@ -29,11 +30,12 @@
   /* margin: auto; */
   width: inherit;
   max-width: 100px;
+  text-shadow: ivory 1px 1px;
 }
 
 @keyframes rolling {
+
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
@@ -52,4 +54,12 @@
 .side-items {
   max-width: 100px;
   align-self: center;
+
+  font-size: smaller;
+}
+
+p {
+  width: 100px;
+  margin: -70px;
+  text-shadow: ivory 1px 1px;
 }

@@ -15,6 +15,7 @@ function App() {
 
   return (
     <div className="App">
+      
       {isLandscape ? <PirateGame /> :
         <h1>please change to landscape mode</h1>
       }

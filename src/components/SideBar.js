@@ -8,11 +8,12 @@ const SideBar = () => {
   const { diceResult, rollDice } = useContext(DiceContext);
   const handleClick = () => {
     rollDice()
-    
+
   }
 
   return (
     <div className='side-bar'>
+      <p className='side-items'>Click on the island's numbers for info</p>
       <div id='hand' className='side-items'>
         <img src={Hand} alt='img' className='side-items' />
         <br />
