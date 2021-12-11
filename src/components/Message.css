@@ -1,28 +1,25 @@
 .message-div {
   position: absolute;
   border: 3px solid black;
-  /* display: flex; */
-  /* align-self: center; */
-  /* flex-wrap: nowrap; */
-  /* align-content: center; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* text-align: center; */
   justify-self: center;
-  /* margin-right: 20%; */
-  padding: 10%;
+  padding: 30px;
+  margin: 10px;
+  width: 400px;
   background-color: #000000e0;
   color: #c7b5b5;
   border-radius: 50px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .message {
   font-family: cursive;
   font-size: xxx-large;
 }
-#start-over{
+
+#start-over {
   padding: 10px;
   border-radius: 5%;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: rgb(77, 72, 63);
 }

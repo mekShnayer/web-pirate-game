@@ -29,8 +29,6 @@ const islandsArr = [
   {
     inx: 5,
     src: bottle_message,
-
-
   },
   {
     inx: 4,
@@ -54,8 +52,8 @@ function GameMap() {
       {
         islandsArr.map((island, inx) =>
           <div className='island' key={inx} id={`num_${inx}`} style={{ left: island.left, top: island.top }}>
-            <img src={island.src} alt='img' className='island' />
-            {inx + 1 == diceResult && <Pirate />}
+            <img src={island.src} alt='img' className='island' id={`island_${island.inx}`} />
+            {island.inx == diceResult && <Pirate />}
 
             <div className='island-num' style={{ top: island.topnum }}>
               {island.inx}
@@ -63,6 +61,7 @@ function GameMap() {
           </div>
         )
       }
+
     </div>
 
   )

@@ -6,7 +6,10 @@ import { DiceContext } from '../context/DiceContextProvider';
 
 const SideBar = () => {
   const { diceResult, rollDice } = useContext(DiceContext);
- 
+  const handleClick = () => {
+    rollDice()
+    
+  }
 
   return (
     <div className='side-bar'>
@@ -15,7 +18,7 @@ const SideBar = () => {
         <br />
         <span>  browse map</span>
       </div>
-      <button id='dice-roll' onClick={rollDice} className='side-items'> Roll dice</button>
+      <button id='dice-roll' onClick={handleClick} className='side-items'> Roll dice</button>
       <Dice />
     </div>
   )

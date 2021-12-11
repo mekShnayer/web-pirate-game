@@ -15,7 +15,9 @@ function App() {
 
   return (
     <div className="App">
-      {isLandscape ? <PirateGame /> : 'please change to landscape mode'}
+      {isLandscape ? <PirateGame /> :
+        <h1>please change to landscape mode</h1>
+      }
     </div>
   );
 }
