@@ -34,7 +34,7 @@ function App() {
       action: message,
       time_stamp: Date.now()
     }
-    fetch('https://postman-echo.com/post', {
+    fetch('https://fake-backend/pirategamedata', {
       method: 'POST',
       headers: { 'Content-Type': "application/json" },
       body: game_data

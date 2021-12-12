@@ -15,28 +15,22 @@ const Message = () => {
   const randomIndex = Math.floor(Math.random() * randomMessagesArr.length)
   const rum = ['The rum is poisand, YOU LOST', 'The rum is good, YAY - YOU WON!']
   const randomRum = Math.floor(Math.random() * 2)
-
+  const islandNumMessageArr = ['0',
+    'you stayed in the same place, GAME OVER',
+    '2',
+    'you got eaten by a dragon, GAME OVER',
+    'you have found the treasure, YOU WON!',
+    '5',
+    'you got to the final island, YOU WON!']
   switch (diceResult) {
-    case 1:
-      setMessage('you stayed in the same place, GAME OVER')
-      break;
     case 2:
       setMessage(rum[randomRum])
-      break;
-    case 3:
-      setMessage('you got eaten by a dragon, GAME OVER')
-      break;
-    case 4:
-      setMessage('you have found the treasure, YOU WON!')
       break;
     case 5:
       setMessage(`Message in a bottle: ${randomMessagesArr[randomIndex]}`)
       break;
-    case 6:
-      setMessage('you got to the final island, YOU WON!')
-      break;
     default:
-      setMessage('')
+      setMessage(islandNumMessageArr[diceResult])
   }
 
   return (

@@ -24,37 +24,13 @@
   z-index: 2;
   animation-name: showBlock;
   animation-duration: 2s;
-  /* animation-delay: 2s; */
   animation-iteration-count: 1;
 }
-/* 
-@keyframes showContent {
-  from {
-    width: 0;
-    opacity: 0;
-    font-size: 0px;
-    height: 0;
-  }
-
-  to {
-    opacity: 1;
-    font-size: xx-large;
-    height: fit-content;
-  }
-} */
-
-
-
 
 #message {
   font-family: cursive;
   font-size: xx-large;
-  /* animation-name: showContent; */
-  /* animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1; */
 }
-
 
 #start-over {
   padding: 15px;
@@ -64,8 +40,4 @@
   background-color: rgb(77, 72, 63);
   font-size: larger;
   font-family: inherit;
-  /* animation-name: showContent; */
-  /* animation-duration: 5s; */
-  /* animation-delay: 2s; */
-  /* animation-iteration-count: 1; */
 }
