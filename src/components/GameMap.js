@@ -50,7 +50,7 @@ const islandsArr = [
 ]
 
 function GameMap() {
-  const { diceResult, rollDice, isStart } = useContext(DiceContext);
+  const { diceResult, isStart } = useContext(DiceContext);
 
   return (
     <div className='game-map'>
@@ -60,7 +60,7 @@ function GameMap() {
         islandsArr.map((island, inx) =>
           <div className='island' key={inx} id={`num_${inx}`} style={{ left: island.left, top: island.top }}>
             <img src={island.src} alt='img' className='island' id={`island_${island.inx}`} />
-            {island.inx == diceResult && <Pirate />}
+            {island.inx === diceResult && <Pirate />}
 
             <div className='island-num' style={{ top: island.topnum }} onClick={()=>alert(island.description)}>
               {island.inx}

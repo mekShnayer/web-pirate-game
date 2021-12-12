@@ -35,6 +35,8 @@ const Message = () => {
     case 6:
       setMessage('you got to the final island, YOU WON!')
       break;
+    default:
+      setMessage('')
   }
 
   return (

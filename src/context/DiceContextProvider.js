@@ -7,7 +7,7 @@ const DiceContextProvider = (props) => {
   const [isStart, setIsStart] = useState(true);
   const [message, setMessage] = useState('');
 
-
+ 
   let rootElementStyle = document.querySelector(':root');
 
 

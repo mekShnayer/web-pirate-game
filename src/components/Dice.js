@@ -32,12 +32,14 @@ function Dice() {
       case 6:
         img = Dice_6;
         break;
+      default:
+        img = Dice_1;
     }
     return img;
   }
   return (
-    <div  className='side-items'>
-      <img src={result()} alt='img' className='side-items' id='dice'/>
+    <div className='side-items'>
+      <img src={result()} alt='img' className='side-items' id='dice' />
     </div>
   )
 }
