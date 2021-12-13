@@ -23,7 +23,7 @@
   width: 300px;
   margin: auto;
   flex-wrap: wrap;
-  padding: 5px;
+  
   position: relative;
 }
 
@@ -48,8 +48,8 @@
   position: fixed;
   z-index: 1;
   padding-left: 90px;
-  top:-10px;
-  left:10px;
+  /* top:-10px;
+  left:10px; */
   left: var(--chosenLeft);
   top:var(--chosenTop);
   height: 150px;

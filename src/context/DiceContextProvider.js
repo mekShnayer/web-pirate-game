@@ -22,9 +22,11 @@ const DiceContextProvider = (props) => {
 
     let result = Math.floor(Math.random() * 6 + 1);
     setDiceResult(result);
-    
+
     document.getElementById('dice').className += ' rolling';
-    changePirateLocation(result)
+    if (result !== 1) {
+      changePirateLocation(result)
+    }
     setDiceResult(result);
     setTimeout(() => {
       document.getElementById('dice').className -= ' rolling';
